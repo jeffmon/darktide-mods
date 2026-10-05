@@ -53,7 +53,9 @@ DARKTIDE_APP_ID = "1361210"
 NEXUS_GAME_ID = 4943
 NEXUS_DOMAIN = "warhammer40kdarktide"
 GRAPHQL_URL = "https://api.nexusmods.com/v2/graphql"
-USER_AGENT = "darktide-mods/1.0 (personal mod updater)"
+# Bumped for every release; release.py tags and uploads this version.
+APP_VERSION = "1.0.0"
+USER_AGENT = f"darktide-mods/{APP_VERSION} (personal mod updater)"
 
 DEFAULT_GAME_DIR = Path(
     r"C:\Program Files (x86)\Steam\steamapps\common\Warhammer 40,000 DARKTIDE")
@@ -1095,7 +1097,7 @@ def run_gui() -> None:
     paths = default_paths(state)
 
     root = tk.Tk()
-    root.title("Darktide Mods")
+    root.title(f"Darktide Mods {APP_VERSION}")
     root.geometry("1060x680")
     root.minsize(820, 520)
 
@@ -1591,7 +1593,7 @@ def run_gui() -> None:
 # --------------------------------------------------------------------------
 
 def cli(argv: list[str]) -> int:
-    ap = argparse.ArgumentParser(prog="darktide_mods",
+    ap = argparse.ArgumentParser(prog=f"darktide_mods {APP_VERSION}",
                                  description="Darktide mod updater. No command opens the window.")
     sub = ap.add_subparsers(dest="cmd")
     sub.add_parser("list", help="installed mods and versions")

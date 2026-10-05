@@ -54,3 +54,16 @@ at launch. A onefile exe unpacks itself to %TEMP% and relaunches as a child
 process, which is what dropper malware does; folder mode does neither. It
 is still unsigned, so SmartScreen warns on first launch, and a heuristic
 can still misfire - READ ME.txt tells the user how to allow it.
+
+## Releasing
+
+Every update ships as a GitHub release with the zip attached:
+
+1. Bump `APP_VERSION` in `darktide_mods.py` and commit.
+2. `python release.py` - runs the tests, builds, zips
+   `DarktideMods-v<version>.zip`, pushes, tags `v<version>`, creates the
+   release with the commit subjects since the last tag as notes, and
+   refreshes the Desktop copies. `--dry-run` builds without publishing.
+
+The repo is private, so a release download needs a GitHub login with
+access to it.
