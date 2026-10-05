@@ -1,0 +1,76 @@
+DARKTIDE MODS - keeps your Darktide mods up to date
+====================================================
+
+You need Darktide Mod Loader already installed (the usual
+"mods" folder in your Darktide game folder). This app does not
+install the loader for you the first time.
+
+Getting started
+---------------
+1. Unzip the whole DarktideMods folder anywhere and double-click
+   DarktideMods.exe inside it. Keep the "_internal" folder next to
+   the exe; the app needs it.
+   Windows may say "Windows protected your PC" because the app
+   isn't signed by a company: click "More info", then "Run anyway".
+
+   If Windows Security quarantines it instead ("Threats found"):
+   that's a known false alarm for apps built this way (Python
+   packaged with PyInstaller). Open Windows Security > Virus &
+   threat protection > Protection history, click the entry for
+   DarktideMods.exe, then Actions > Allow on device (or Restore).
+2. If Darktide isn't in the default Steam folder, it asks you to
+   pick your "Warhammer 40,000 DARKTIDE" folder. It remembers.
+3. It checks Nexus for updates straight away.
+
+Some older mods don't say which version they are, so they show "?".
+Select them all (Ctrl+click), press "Set version..." and it marks
+them as the latest version. That assumes you installed them
+recently; if not, set the real version one by one.
+
+Mods it can't match to Nexus
+----------------------------
+Newer mods say which Nexus page they come from; for older ones the
+app works it out from the mod's name, or from the mod's zip if it's
+still in your Downloads folder. If a mod still says "not matched to
+Nexus", select it, press "Link to Nexus..." and paste the address of
+its Nexus page (for example
+https://www.nexusmods.com/warhammer40kdarktide/mods/14).
+Leave it empty for a mod that isn't on Nexus at all.
+Selecting a mod shows how it was matched, so you can check it.
+
+Updating a mod
+--------------
+1. Select the mod and press "Get update". The Nexus page opens.
+2. Download it on Nexus as normal (you need to be logged in there).
+3. Leave the app open. When the zip lands in your Downloads folder
+   it installs it by itself. Close the game first; it waits if
+   Darktide is running.
+
+The old version is kept. "Roll back" puts it back if the update
+misbehaves.
+
+Adding a new mod
+----------------
+Download any Darktide mod from Nexus while the app is open and it
+installs it and switches it on, just like an update. Untick
+"New mods too" (top right) if you'd rather do that yourself.
+Zips that were already in Downloads the first time you opened the
+app are left alone, so mods you removed on purpose don't come back.
+
+The other buttons
+-----------------
+Enable / disable   Turns a mod on or off (takes effect next launch).
+Install zip...     Install any mod zip by hand, including new mods.
+Link to Nexus...   Tell it which Nexus page a mod comes from.
+Crash report       After a crash: reads the game's log and names the
+                   mod that was running when it broke.
+Patch & Launch     Use this to start the game after a Darktide update.
+                   Updates switch the mod loader off; this switches it
+                   back on, then launches the game.
+Activity           What the app has done this session.
+
+Where things live
+-----------------
+Settings and backups: %LOCALAPPDATA%\DarktideMods
+(paste that into File Explorer's address bar). Deleting that folder
+resets the app; it never touches your mods when you do.
