@@ -65,5 +65,5 @@ Every update ships as a GitHub release with the zip attached:
    release with the commit subjects since the last tag as notes, and
    refreshes the Desktop copies. `--dry-run` builds without publishing.
 
-The repo is private, so a release download needs a GitHub login with
-access to it.
+Latest download for anyone:
+https://github.com/jeffmon/darktide-mods/releases/latest
